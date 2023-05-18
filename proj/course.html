@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>B.Tech Course Page</title>
+	<link rel="stylesheet" type="text/css" href="course.css">
+</head>
+<body>
+    <div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="./main.php">Main</a></li>
+            <li><a href="./about.html">about us</a></li>
+            <li><a href="./contact.html">contact</a></li>
+            <li><button onclick="logout()">Logout</button></li>
+        </ul>
+    </nav>
+    </div>
+	<header>
+		<h1>B.Tech Courses</h1>
+	</header>
+	<main>
+		<section class="filters">
+			<h2>Filters</h2>
+			<form action="" method="get">
+				<label for="search">Search:</label>
+				<input type="text" id="search" name="search">
+				<label for="sort">Sort by:</label>
+				<select id="sort" name="sort">
+					<option value="popularity">Popularity</option>
+					<option value="alphabetical">Alphabetical</option>
+				</select>
+				<button type="submit">Filter</button>
+			</form>
+		</section>
+		<section class="courses">
+			<h2>Courses</h2>
+			<ul>
+				<li class="course">
+					<h3>Introduction to Computer Science</h3>
+					<p>Learn the fundamentals of computer science, including programming, algorithms, and data structures.</p>
+					<span class="popularity">Popularity: 5/5</span>
+				</li>
+				<li class="course">
+					<h3>Database Systems</h3>
+					<p>Explore the principles and practice of database systems, including relational databases, query languages, and database design.</p>
+					<span class="popularity">Popularity: 4/5</span>
+				</li>
+				<li class="course">
+					<h3>Operating Systems</h3>
+					<p>Learn about the design and implementation of operating systems, including process management, memory management, and file systems.</p>
+					<span class="popularity">Popularity: 3/5</span>
+				</li>
+				<li class="course">
+					<h3>Web Development</h3>
+					<p>Discover the technologies and tools used in web development, including HTML, CSS, JavaScript, and server-side scripting.</p>
+					<span class="popularity">Popularity: 4/5</span>
+				</li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 B.Tech Course Page</p>
+	</footer>
+    <script>
+		function logout() {
+		window.location.href = "index1.html";
+	}
+	</script>
+</body>
+</html>

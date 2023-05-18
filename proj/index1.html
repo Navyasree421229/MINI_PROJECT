@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>project</title>
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <nav> 
+                <ul>
+                    <li><a href="./index1.html">Home</a></li>
+                    <li><a href='./about.html'>About Us</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login' action="login.php" method="post">
+                    <input type='text'class='input-field'placeholder='Email Id' name="EmailId" >
+		            <input type='password'class='input-field'placeholder='Enter Password' name="EnterPassword" >
+		            <input type='checkbox'class='check-box'><span>Remember Password</span>
+		            <button type='submit'class='submit-btn' name="submit">Log in</button>
+		        </form>
+		        <form id='register' class='input-group-register' action="register.php" method="post">
+		            <input type='text'class='input-field'placeholder='First Name' name="FirstName">
+		            <input type='text'class='input-field'placeholder='Last Name ' name="LastName">
+		            <input type='email'class='input-field'placeholder='Email Id' name="EmailId">
+		            <input type='password'class='input-field'placeholder='Enter Password' name="EnterPassword">
+		            <input type='password'class='input-field'placeholder='Confirm Password' name="ConfirmPassword">
+		            <input type='checkbox'class='check-box' name=""><span>I agree to the terms and conditions</span>
+                    <button type='submit'class='submit-btn' name="submit">Register</button>
+	            </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
